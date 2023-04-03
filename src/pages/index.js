@@ -37,7 +37,7 @@ export default function Home() {
                 className="!text-6xl !text-left xl:!text-5xl lg:!text-center lg:!text-6xl md:!text-5xl sm:!text-3xl"
               />
               <p className="my-4 text-base font-medium dark:text-light md:text-sm sm:text-xs">
-                Hi!, I'm Reza ... As a Web Developer, I want to change my future
+                Hi!, Im Reza ... As a Web Developer, I want to change my future
                 with technology that is developing very fast
               </p>
               <div className="flex items-center self-start mt-2 lg:self-center">
