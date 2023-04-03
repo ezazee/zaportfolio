@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/inline-script-id */
 import Footer from '@/components/Footer';
 import Navbar from '@/components/Navbar';
 import '@/styles/globals.css';
@@ -5,6 +6,7 @@ import { AnimatePresence } from 'framer-motion';
 import { Montserrat } from 'next/font/google';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
+import Script from 'next/script';
 
 const montserrat = Montserrat({
   subsets: ['latin'],
@@ -15,6 +17,21 @@ export default function App({ Component, pageProps }) {
   const router = useRouter();
   return (
     <>
+      <Script
+        strategy="lazyOnload"
+        src={`https://www.googletagmanager.com/gtag/js?id=G-SXJP42TN9C`}
+      />
+
+      <Script strategy="lazyOnload">
+        {`
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){dataLayer.push(arguments);}
+                    gtag('js', new Date());
+                    gtag('config', 'G-SXJP42TN9C', {
+                    page_path: window.location.pathname,
+                    });
+                `}
+      </Script>
       <Head>
         <meta
           name="description"
