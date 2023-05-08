@@ -141,8 +141,13 @@ const Navbar = () => {
               toggle={handleClick}
             />
             <CustomMobileLink
-              href="/project"
-              title="Project"
+              href="/code-project"
+              title="Code Project"
+              toggle={handleClick}
+            />
+            <CustomMobileLink
+              href="/design-project"
+              title="Design Project"
               toggle={handleClick}
             />
           </nav>
