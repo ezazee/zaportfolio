@@ -38,7 +38,7 @@ const tentang = () => {
   return (
     <>
       <Head>
-        <title>Zaportfolio | Tentang Saya</title>
+        <title>Zaportfolio | About Me</title>
         <meta
           name="description"
           content="I am Mohamad Reza Reziyanto, I am a Freelancer from West Java, my expertise is in the digital field such as Design, Web Developer, Ui Ux Design, etc."

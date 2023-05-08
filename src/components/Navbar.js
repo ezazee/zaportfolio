@@ -2,15 +2,8 @@ import Link from 'next/link';
 import React, { useState } from 'react';
 import Logo from './Logo';
 import { useRouter } from 'next/router';
-import {
-  InstagramIcon,
-  GithubIcon,
-  LinkedInIcon,
-  SunIcon,
-  MoonIcon,
-} from './Icons';
+import { InstagramIcon, GithubIcon, LinkedInIcon } from './Icons';
 import { motion } from 'framer-motion';
-import useThemeSwitcher from './hooks/useThemeSwitcher';
 
 const CustomLink = ({ href, title, className = '' }) => {
   const router = useRouter();
@@ -21,8 +14,7 @@ const CustomLink = ({ href, title, className = '' }) => {
       <span
         className={`dark:bg-light h-[1px] inline-block bg-dark absolute left-0 -bottom-0.5 group-hover:w-full transition-[width] ease-in-out duration-300 ${
           router.asPath === href ? 'w-full' : 'w-0'
-        }`}
-      >
+        }`}>
         &nbsp;
       </span>
     </Link>
@@ -39,15 +31,13 @@ const CustomMobileLink = ({ href, title, className = '', toggle }) => {
     <button
       href={href}
       className={`${className} relative group text-light my-2`}
-      onClick={handleClick}
-    >
+      onClick={handleClick}>
       {title}
 
       <span
         className={`dark:bg-light h-[1px] inline-block bg-light absolute left-0 -bottom-0.5 group-hover:w-full transition-[width] ease-in-out duration-300 ${
           router.asPath === href ? 'w-full' : 'w-0'
-        }`}
-      >
+        }`}>
         &nbsp;
       </span>
     </button>
@@ -55,7 +45,6 @@ const CustomMobileLink = ({ href, title, className = '', toggle }) => {
 };
 
 const Navbar = () => {
-  const [mode, setMode] = useThemeSwitcher();
   const [isOpen, setIsOpen] = useState(false);
 
   const handleClick = () => {
@@ -66,23 +55,19 @@ const Navbar = () => {
     <header className="relative flex items-center justify-between w-full px-32 py-8 font-medium dark:text-light lg:px-16 md:px-12 sm:px-8">
       <button
         className="flex-col items-center justify-center hidden lg:flex"
-        onClick={handleClick}
-      >
+        onClick={handleClick}>
         <span
           className={`bg-dark block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm ${
             isOpen ? 'rotate-45 translate-y-1' : '-translate-y-0.5 '
-          }`}
-        ></span>
+          }`}></span>
         <span
           className={`bg-dark block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm my-0.5 ${
             isOpen ? 'opacity-0' : 'opacity-100'
-          }`}
-        ></span>
+          }`}></span>
         <span
           className={`bg-dark block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm ${
             isOpen ? '-rotate-45 -translate-y-1' : '-translate-y-0.5 '
-          }`}
-        ></span>
+          }`}></span>
       </button>
 
       {/* Dekstop */}
@@ -90,7 +75,16 @@ const Navbar = () => {
         <nav>
           <CustomLink href="/" title="Home" className="mr-4" />
           <CustomLink href="/tentang" title="About Me" className="mx-4" />
-          <CustomLink href="/project" title="Project" className="ml-4" />
+          <CustomLink
+            href="/code-project"
+            title="Code Project"
+            className="ml-4"
+          />
+          <CustomLink
+            href="/design-project"
+            title="Design Project"
+            className="ml-4"
+          />
         </nav>
         <nav className="flex flex-wrap items-center justify-center">
           <motion.a
@@ -98,8 +92,7 @@ const Navbar = () => {
             target={'_blank'}
             whileHover={{ y: -2 }}
             whileTap={{ scale: 0.9 }}
-            className="w-6 mx-3"
-          >
+            className="w-6 mx-3">
             <InstagramIcon />
           </motion.a>
           <motion.a
@@ -107,8 +100,7 @@ const Navbar = () => {
             target={'_blank'}
             whileHover={{ y: -2 }}
             whileTap={{ scale: 0.9 }}
-            className="w-6 mx-3"
-          >
+            className="w-6 mx-3">
             <GithubIcon />
           </motion.a>
           <motion.a
@@ -116,8 +108,7 @@ const Navbar = () => {
             target={'_blank'}
             whileHover={{ y: -2 }}
             whileTap={{ scale: 0.9 }}
-            className="w-6 ml-3"
-          >
+            className="w-6 ml-3">
             <LinkedInIcon />
           </motion.a>
 
@@ -141,8 +132,7 @@ const Navbar = () => {
         <motion.div
           initial={{ scale: 0, opacity: 0, x: '-50%', y: '-50%' }}
           animate={{ scale: 1, opacity: 1 }}
-          className="flex items-center justify-between min-w-[70vw] flex-col fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-30 bg-dark/90 rounded-lg backdrop-blur-md py-32"
-        >
+          className="flex items-center justify-between min-w-[70vw] flex-col fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-30 bg-dark/90 rounded-lg backdrop-blur-md py-32">
           <nav className="flex flex-col items-center justify-center">
             <CustomMobileLink href="/" title="Home" toggle={handleClick} />
             <CustomMobileLink
@@ -162,8 +152,7 @@ const Navbar = () => {
               target={'_blank'}
               whileHover={{ y: -2 }}
               whileTap={{ scale: 0.9 }}
-              className="w-6 mx-3 sm:mx-1"
-            >
+              className="w-6 mx-3 sm:mx-1">
               <InstagramIcon />
             </motion.a>
             <motion.a
@@ -171,8 +160,7 @@ const Navbar = () => {
               target={'_blank'}
               whileHover={{ y: -2 }}
               whileTap={{ scale: 0.9 }}
-              className="w-6 mx-3 rounded-full bg-light sm:mx-1"
-            >
+              className="w-6 mx-3 rounded-full bg-light sm:mx-1">
               <GithubIcon />
             </motion.a>
             <motion.a
@@ -180,8 +168,7 @@ const Navbar = () => {
               target={'_blank'}
               whileHover={{ y: -2 }}
               whileTap={{ scale: 0.9 }}
-              className="w-6 ml-3 sm:mx-1"
-            >
+              className="w-6 ml-3 sm:mx-1">
               <LinkedInIcon />
             </motion.a>
 

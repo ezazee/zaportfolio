@@ -4,6 +4,7 @@ module.exports = {
   content: [
     // Or if using `src` directory:
     './src/**/*.{js,ts,jsx,tsx}',
+    './public/**/*.html",',
   ],
   darkMode: 'class',
   theme: {
@@ -66,5 +67,5 @@ module.exports = {
       // => @media (max-width: 479px) { ... }
     },
   },
-  plugins: [],
+  plugins: [require('flowbite/plugin')],
 };

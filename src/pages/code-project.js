@@ -19,7 +19,6 @@ import portoweb9 from '../../public/images/projects/web/porto9.png';
 
 // Import Image Flutter Native APP
 import flutter1 from '../../public/images/projects/flutter/flutter1.png';
-import { FlatTree } from 'framer-motion';
 
 const FeaturedProject = ({ type, title, summary, img, link, github }) => {
   return (
@@ -28,8 +27,7 @@ const FeaturedProject = ({ type, title, summary, img, link, github }) => {
       <Link
         href={link}
         target="_blank"
-        className="w-1/2 overflow-hidden rounded-lg cursor-pointer lg:w-full"
-      >
+        className="w-1/2 overflow-hidden rounded-lg cursor-pointer lg:w-full">
         <Image
           src={img}
           alt={title}
@@ -46,8 +44,7 @@ const FeaturedProject = ({ type, title, summary, img, link, github }) => {
         <Link
           href={link}
           target="_blank"
-          className="hover:underline underline-offset-3"
-        >
+          className="hover:underline underline-offset-3">
           <h2 className="w-full my-2 text-4xl font-bold text-left sm:text-sm">
             {title}
           </h2>
@@ -61,8 +58,7 @@ const FeaturedProject = ({ type, title, summary, img, link, github }) => {
           <Link
             href={link}
             target="_blank"
-            className="p-2 px-6 ml-4 text-lg font-semibold rounded-lg bg-dark text-light sm:px-4 sm:text-base"
-          >
+            className="p-2 px-6 ml-4 text-lg font-semibold rounded-lg bg-dark text-light sm:px-4 sm:text-base">
             {' '}
             Visit Project
           </Link>
@@ -79,8 +75,7 @@ const Project = ({ title, type, img, link, github }) => {
       <Link
         href={link}
         target="_blank"
-        className="w-full overflow-hidden rounded-lg cursor-pointer"
-      >
+        className="w-full overflow-hidden rounded-lg cursor-pointer">
         <Image
           src={img}
           alt={title}
@@ -97,8 +92,7 @@ const Project = ({ title, type, img, link, github }) => {
         <Link
           href={link}
           target="_blank"
-          className="hover:underline underline-offset-3"
-        >
+          className="hover:underline underline-offset-3">
           <h2 className="w-full my-2 text-3xl font-bold text-left lg:text-2xl">
             {title}
           </h2>
@@ -107,8 +101,7 @@ const Project = ({ title, type, img, link, github }) => {
           <Link
             href={link}
             target="_blank"
-            className="text-lg font-semibold underline md:text-base"
-          >
+            className="text-lg font-semibold underline md:text-base">
             {' '}
             Visit
           </Link>
@@ -126,7 +119,7 @@ const project = () => {
   return (
     <>
       <Head>
-        <title>Zaportfolio | Project</title>
+        <title>Zaportfolio | Code Project</title>
         <meta
           name="description"
           content="I am Mohamad Reza Reziyanto, I am a Freelancer from West Java, my expertise is in the digital field such as Design, Web Developer, Ui Ux Design, etc."
@@ -137,7 +130,7 @@ const project = () => {
         {/* Coding Repo */}
         <Layout className="pt-16">
           <AnimasiText
-            text="Coding Repo."
+            text="Website Project"
             className="mb-16 lg:!text-7xl sm:mb-8 sm:!text-6xl xs:!text-4xl"
           />
           <div className="grid grid-cols-12 gap-24 gap-y-32 xl:gap-x-16 lg:gap-x-8 md:gap-y-24 sm:gap-x-0">
@@ -237,7 +230,7 @@ const project = () => {
         {/* Flutter App Repo */}
         <Layout className="pt-16">
           <AnimasiText
-            text="Flutter & React Native App Repo."
+            text="Mobile App Project"
             className="mb-16 lg:!text-7xl sm:mb-8 sm:!text-6xl xs:!text-4xl"
           />
           <div className="grid grid-cols-12 gap-24 gap-y-32 xl:gap-x-16 lg:gap-x-8 md:gap-y-24 sm:gap-x-0">

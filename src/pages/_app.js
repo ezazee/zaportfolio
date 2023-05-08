@@ -11,6 +11,7 @@ import Script from 'next/script';
 const montserrat = Montserrat({
   subsets: ['latin'],
   variable: '--font-mont',
+  weight: '700',
 });
 
 export default function App({ Component, pageProps }) {
@@ -40,8 +41,7 @@ export default function App({ Component, pageProps }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <main
-        className={`${montserrat.variable} font-mont bg-light w-full dark:bg-dark min-h-screen`}
-      >
+        className={`${montserrat.variable} font-mont bg-light w-full dark:bg-dark min-h-screen`}>
         <Navbar />
         <AnimatePresence mode="wait">
           <Component key={router.asPath} {...pageProps} />

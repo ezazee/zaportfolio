@@ -12,7 +12,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Zaportfolio | Home</title>
+        <title>Zaportfolio</title>
         <meta
           name="description"
           content="I am Mohamad Reza Reziyanto, I am a Freelancer from West Java, my expertise is in the digital field such as Design, Web Developer, Ui Ux Design, etc."
@@ -45,15 +45,13 @@ export default function Home() {
                   href="/CV.pdf"
                   target={'_blank'}
                   download={true}
-                  className="flex items-center bg-dark text-light p-2.5 px-6 rounded-lg text-lg font-semibold hover:bg-light hover:text-dark border-2 border-solid border-transparent hover:border-dark dark:bg-light dark:text-dark hover:dark:bg-dark hover:dark:text-light hover:dark:border-light md:p-2 md:px-4 md:text-base"
-                >
+                  className="flex items-center bg-dark text-light p-2.5 px-6 rounded-lg text-lg font-semibold hover:bg-light hover:text-dark border-2 border-solid border-transparent hover:border-dark dark:bg-light dark:text-dark hover:dark:bg-dark hover:dark:text-light hover:dark:border-light md:p-2 md:px-4 md:text-base">
                   Resume <LinkArrow className="w-6 ml-3" />
                 </Link>
                 <Link
                   href="https://wa.me/6281313711180"
                   className="ml-4 text-lg font-medium underline capitalize text-dark dark:text-light md:text-base"
-                  target={'_blank'}
-                >
+                  target={'_blank'}>
                   Whatsapp
                 </Link>
               </div>
