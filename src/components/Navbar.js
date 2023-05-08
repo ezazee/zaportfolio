@@ -12,7 +12,7 @@ const CustomLink = ({ href, title, className = '' }) => {
       {title}
 
       <span
-        className={`dark:bg-light h-[1px] inline-block bg-dark absolute left-0 -bottom-0.5 group-hover:w-full transition-[width] ease-in-out duration-300 ${
+        className={` h-[1px] inline-block bg-dark absolute left-0 -bottom-0.5 group-hover:w-full transition-[width] ease-in-out duration-300 ${
           router.asPath === href ? 'w-full' : 'w-0'
         }`}>
         &nbsp;
@@ -35,7 +35,7 @@ const CustomMobileLink = ({ href, title, className = '', toggle }) => {
       {title}
 
       <span
-        className={`dark:bg-light h-[1px] inline-block bg-light absolute left-0 -bottom-0.5 group-hover:w-full transition-[width] ease-in-out duration-300 ${
+        className={` h-[1px] inline-block bg-light absolute left-0 -bottom-0.5 group-hover:w-full transition-[width] ease-in-out duration-300 ${
           router.asPath === href ? 'w-full' : 'w-0'
         }`}>
         &nbsp;
@@ -52,7 +52,7 @@ const Navbar = () => {
   };
 
   return (
-    <header className="relative flex items-center justify-between w-full px-32 py-8 font-medium dark:text-light lg:px-16 md:px-12 sm:px-8">
+    <header className="relative flex items-center justify-between w-full px-32 py-8 font-medium lg:px-16 md:px-12 sm:px-8">
       <button
         className="flex-col items-center justify-center hidden lg:flex"
         onClick={handleClick}>

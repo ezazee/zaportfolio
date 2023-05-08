@@ -27,7 +27,7 @@ const DesignProject = () => {
               <h3 className="md:text-[48px] text-[35px] leading-[1.25] mb-[23px] mt-1.5">
                 Design Project
               </h3>
-              <p className="text-muted dark:text-darkmuted text-lg leading-[30px]">
+              <p className="text-muted text-lg leading-[30px]">
                 Most common methods for designing websites that work well on
                 desktop is responsive and adaptive design
               </p>
@@ -85,7 +85,7 @@ const DesignProject = () => {
               <h3 className="md:text-[48px] text-[35px] leading-[1.25] mb-[23px] mt-1.5">
                 UI & UX Design Project
               </h3>
-              <p className="text-muted dark:text-darkmuted text-lg leading-[30px]">
+              <p className="text-muted text-lg leading-[30px]">
                 Most common methods for designing websites that work well on
                 desktop is responsive and adaptive design
               </p>

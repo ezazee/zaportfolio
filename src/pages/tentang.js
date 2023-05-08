@@ -45,7 +45,7 @@ const tentang = () => {
         />
       </Head>
       <TransitionEffect />
-      <main className="flex flex-col items-center justify-center w-full dark:text-light">
+      <main className="flex flex-col items-center justify-center w-full">
         <Layout className="pt-16">
           <AnimasiText
             text="Knowledge is a Power!"
@@ -86,7 +86,7 @@ const tentang = () => {
                 <span className="inline-block font-bold text-7xl md:text-6xl sm:text-5xl xs:text-4xl">
                   <AnimatedNumbers value={20} /> +
                 </span>
-                <h2 className="text-xl font-medium capitalize text-dark/75 dark:text-light/75 xl:text-center md:text-lg sm:text-base xs:text-sm">
+                <h2 className="text-xl font-medium capitalize text-dark/75 xl:text-center md:text-lg sm:text-base xs:text-sm">
                   Client
                 </h2>
               </div>
@@ -95,7 +95,7 @@ const tentang = () => {
                 <span className="inline-block font-bold text-7xl md:text-6xl sm:text-5xl xs:text-4xl">
                   <AnimatedNumbers value={30} /> +
                 </span>
-                <h2 className="text-xl font-medium capitalize text-dark/75 dark:text-light/75 xl:text-center md:text-lg sm:text-base xs:text-sm">
+                <h2 className="text-xl font-medium capitalize text-dark/75 xl:text-center md:text-lg sm:text-base xs:text-sm">
                   Project Completed
                 </h2>
               </div>
@@ -104,7 +104,7 @@ const tentang = () => {
                 <span className="inline-block font-bold text-7xl md:text-6xl sm:text-5xl xs:text-4xl">
                   <AnimatedNumbers value={2} /> +
                 </span>
-                <h2 className="text-xl font-medium capitalize text-dark/75 dark:text-light/75 xl:text-center md:text-lg sm:text-base xs:text-sm">
+                <h2 className="text-xl font-medium capitalize text-dark/75 xl:text-center md:text-lg sm:text-base xs:text-sm">
                   Years Of Experiences
                 </h2>
               </div>
