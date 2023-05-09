@@ -85,6 +85,11 @@ const Navbar = () => {
             title="Design Project"
             className="ml-4"
           />
+          <CustomLink
+            href="/photography"
+            title="Photography"
+            className="ml-4"
+          />
         </nav>
         <nav className="flex flex-wrap items-center justify-center">
           <motion.a
@@ -148,6 +153,11 @@ const Navbar = () => {
             <CustomMobileLink
               href="/design-project"
               title="Design Project"
+              toggle={handleClick}
+            />
+            <CustomMobileLink
+              href="/photography"
+              title="Photography"
               toggle={handleClick}
             />
           </nav>

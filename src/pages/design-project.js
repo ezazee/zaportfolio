@@ -6,6 +6,12 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 import TransitionEffect from '@/components/TransitionEffect';
+// Import foto
+import design1 from '../../public/images/projects/design/1.png';
+import design2 from '../../public/images/projects/design/2.png';
+import design3 from '../../public/images/projects/design/3.png';
+import design4 from '../../public/images/projects/design/4.png';
+import design5 from '../../public/images/projects/design/5.png';
 
 const DesignProject = () => {
   return (
@@ -24,9 +30,9 @@ const DesignProject = () => {
         <div className="container relative z-10">
           <div className="grid grid-cols-1">
             <div className="text-center max-w-[680px] mx-auto">
-              <h3 className="md:text-[48px] text-[35px] leading-[1.25] mb-[23px] mt-1.5">
+              <h4 className="md:text-[34px] text-[35px] leading-[1.25] mb-[23px] mt-1.5">
                 Design Project
-              </h3>
+              </h4>
               <p className="text-muted text-lg leading-[30px]">
                 Most common methods for designing websites that work well on
                 desktop is responsive and adaptive design
@@ -38,40 +44,22 @@ const DesignProject = () => {
         {/* Gallery Design */}
         <div className=" px-10 pt-10 container grid grid-cols-3 gap-2 mx-auto">
           <div className="w-full rounded">
-            <img
-              src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=989&q=80"
-              alt="image"
-            />
+            <Image src={design3} alt="Design" />
           </div>
           <div className="w-full rounded">
-            <img
-              src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=989&q=80"
-              alt="image"
-            />
+            <Image src={design2} alt="Design" />
           </div>
           <div className="w-full rounded">
-            <img
-              src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=989&q=80"
-              alt="image"
-            />
+            <Image src={design1} alt="Design" />
           </div>
           <div className="w-full rounded">
-            <img
-              src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=989&q=80"
-              alt="image"
-            />
+            <Image src={design4} alt="Design" />
           </div>
           <div className="w-full rounded">
-            <img
-              src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=989&q=80"
-              alt="image"
-            />
+            <Image src={design5} alt="Design" />
           </div>
           <div className="w-full rounded">
-            <img
-              src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=989&q=80"
-              alt="image"
-            />
+            <Image src={design1} alt="Design" />
           </div>
         </div>
       </section>
