@@ -13,6 +13,8 @@ import design3 from '../../public/images/projects/design/3.png';
 import design4 from '../../public/images/projects/design/4.png';
 import design5 from '../../public/images/projects/design/5.png';
 import design6 from '../../public/images/projects/design/6.png';
+import design7 from '../../public/images/projects/design/7.png';
+import design8 from '../../public/images/projects/design/8.png';
 
 // import UI Design
 import ui1 from '../../public/images/projects/design/ui1.png';
@@ -74,6 +76,12 @@ const DesignProject = () => {
           <div className="w-full rounded">
             <Image src={design6} alt="Design" />
           </div>
+          <div className="w-full rounded">
+            <Image src={design7} alt="Design" />
+          </div>
+          <div className="w-full rounded">
+            <Image src={design8} alt="Design" />
+          </div>
         </div>
       </section>
 
@@ -83,9 +91,9 @@ const DesignProject = () => {
         <div className="container relative z-10">
           <div className="grid grid-cols-1">
             <div className="text-center max-w-[680px] mx-auto">
-              <h3 className="md:text-[48px] text-[35px] leading-[1.25] mb-[23px] mt-1.5">
+              <h4 className="md:text-[34px] text-[35px] leading-[1.25] mb-[23px] mt-1.5">
                 UI & UX Design Project
-              </h3>
+              </h4>
               <p className="text-muted text-lg leading-[30px]">
                 UI & UX Design which consists of Web Design, Mobile Application
                 Design and several Instagram feeds created by the UI UX Design
