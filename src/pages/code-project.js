@@ -16,7 +16,7 @@ import portoweb6 from '../../public/images/projects/web/porto6.png';
 import portoweb7 from '../../public/images/projects/web/porto7.png';
 import portoweb8 from '../../public/images/projects/web/porto8.png';
 import portoweb9 from '../../public/images/projects/web/porto9.png';
-import portoweb10 from '../../public/images/projects/web/porto10.png';
+import portoweb10 from '../../public/images/projects/web/porto10.jpg';
 
 // Import Image Flutter Native APP
 import flutter1 from '../../public/images/projects/flutter/flutter1.png';
