@@ -7,14 +7,12 @@ const Details = ({ name, time, info }) => {
   return (
     <li
       ref={ref}
-      className="my-8 first:mt-8 last:mb-0 w-[60%] mx-auto flex flex-col items-center justify-between d:w-[80%]"
-    >
+      className="my-8 first:mt-8 last:mb-0 w-[60%] mx-auto flex flex-col items-center justify-between d:w-[80%]">
       <Lilcon reference={ref} />
       <motion.div
         initial={{ y: 50 }}
         whileInView={{ y: 0 }}
-        transition={{ duration: 0.5, type: 'spring' }}
-      >
+        transition={{ duration: 0.5, type: 'spring' }}>
         <h3 className="text-2xl font-bold capitalize sm:text-xl xs:text-lg">
           {name}
         </h3>
@@ -48,17 +46,17 @@ const Education = () => {
         <ul className="flex flex-col items-start justify-between w-full ml-4 xs:ml-2">
           <Details
             name="SDN Sukajaya 5"
-            time="Unknown | Forgot :)"
+            time="2008 - 2014"
             info="Like elementary schools in general...don't have any expertise in the world of IT and don't have any interest in IT"
           />
           <Details
             name="SMPN 3 Tarogong Kidul"
-            time="Unknown | Forgot :)"
+            time="2014 - 2017"
             info="Like junior high schools in general...don't have any expertise in the world of IT and don't have any interest in IT"
           />
           <Details
             name="SMKN 12 Garut"
-            time="June 2017 - June 2020"
+            time="2017 - 2020"
             info="attended high school by entering the Multimedia major, learning JavaScript logic, styling WordPress websites, etc. and joined the Cinematography club by making short films."
           />
         </ul>

@@ -12,6 +12,18 @@ import design2 from '../../public/images/projects/design/2.png';
 import design3 from '../../public/images/projects/design/3.png';
 import design4 from '../../public/images/projects/design/4.png';
 import design5 from '../../public/images/projects/design/5.png';
+import design6 from '../../public/images/projects/design/6.png';
+
+// import UI Design
+import ui1 from '../../public/images/projects/design/ui1.png';
+import ui2 from '../../public/images/projects/design/ui2.png';
+import ui3 from '../../public/images/projects/design/ui3.png';
+import ui4 from '../../public/images/projects/design/ui4.png';
+import ui5 from '../../public/images/projects/design/ui5.png';
+import ui6 from '../../public/images/projects/design/ui6.png';
+import ui7 from '../../public/images/projects/design/ui7.png';
+import ui8 from '../../public/images/projects/design/ui8.png';
+import ui9 from '../../public/images/projects/design/ui9.png';
 
 const DesignProject = () => {
   return (
@@ -34,8 +46,9 @@ const DesignProject = () => {
                 Design Project
               </h4>
               <p className="text-muted text-lg leading-[30px]">
-                Most common methods for designing websites that work well on
-                desktop is responsive and adaptive design
+                A design project consisting of various aspects. Both in terms of
+                clothing, printing design, merchandise, Instagram feeds etc.
+                This design will continue to grow over time
               </p>
             </div>
           </div>
@@ -59,7 +72,7 @@ const DesignProject = () => {
             <Image src={design5} alt="Design" />
           </div>
           <div className="w-full rounded">
-            <Image src={design1} alt="Design" />
+            <Image src={design6} alt="Design" />
           </div>
         </div>
       </section>
@@ -74,8 +87,9 @@ const DesignProject = () => {
                 UI & UX Design Project
               </h3>
               <p className="text-muted text-lg leading-[30px]">
-                Most common methods for designing websites that work well on
-                desktop is responsive and adaptive design
+                UI & UX Design which consists of Web Design, Mobile Application
+                Design and several Instagram feeds created by the UI UX Design
+                software. This design will continue to grow over time
               </p>
             </div>
           </div>
@@ -84,40 +98,33 @@ const DesignProject = () => {
         {/* Gallery Design */}
         <div className=" px-10 pt-10 container grid grid-cols-3 gap-2 mx-auto">
           <div className="w-full rounded">
-            <img
-              src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=989&q=80"
-              alt="image"
-            />
+            <div className="w-full rounded">
+              <Image src={ui1} alt="Design" />
+            </div>
           </div>
           <div className="w-full rounded">
-            <img
-              src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=989&q=80"
-              alt="image"
-            />
+            <Image src={ui2} alt="Design" />
           </div>
           <div className="w-full rounded">
-            <img
-              src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=989&q=80"
-              alt="image"
-            />
+            <Image src={ui3} alt="Design" />
           </div>
           <div className="w-full rounded">
-            <img
-              src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=989&q=80"
-              alt="image"
-            />
+            <Image src={ui4} alt="Design" />
           </div>
           <div className="w-full rounded">
-            <img
-              src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=989&q=80"
-              alt="image"
-            />
+            <Image src={ui5} alt="Design" />
           </div>
           <div className="w-full rounded">
-            <img
-              src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=989&q=80"
-              alt="image"
-            />
+            <Image src={ui6} alt="Design" />
+          </div>
+          <div className="w-full rounded">
+            <Image src={ui7} alt="Design" />
+          </div>
+          <div className="w-full rounded">
+            <Image src={ui8} alt="Design" />
+          </div>
+          <div className="w-full rounded">
+            <Image src={ui9} alt="Design" />
           </div>
         </div>
       </section>

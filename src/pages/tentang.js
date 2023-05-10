@@ -9,6 +9,7 @@ import Skills from '@/components/Skills';
 import Experience from '@/components/Experience';
 import Education from '@/components/Education';
 import TransitionEffect from '@/components/TransitionEffect';
+import Certification from '@/components/Certification';
 
 const AnimatedNumbers = ({ value }) => {
   const ref = useRef(null);
@@ -112,6 +113,7 @@ const tentang = () => {
           </div>
 
           <Skills />
+          <Certification />
           <Experience />
           <Education />
         </Layout>
