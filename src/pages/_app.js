@@ -7,6 +7,7 @@ import { Montserrat } from 'next/font/google';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 import Script from 'next/script';
+import { Analytics } from '@vercel/analytics/react';
 
 const montserrat = Montserrat({
   subsets: ['latin'],
@@ -45,6 +46,7 @@ export default function App({ Component, pageProps }) {
         <Navbar />
         <AnimatePresence mode="wait">
           <Component key={router.asPath} {...pageProps} />
+          <Analytics />
         </AnimatePresence>
         <Footer />
       </main>
