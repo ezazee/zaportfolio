@@ -6,7 +6,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 import TransitionEffect from '@/components/TransitionEffect';
-// Import Image Web Repo
+// Import Image Web Repo Project
 import portoweb1 from '../../public/images/projects/web/porto1.png';
 import portoweb2 from '../../public/images/projects/web/porto2.png';
 import portoweb3 from '../../public/images/projects/web/porto3.png';
