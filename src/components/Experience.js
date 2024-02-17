@@ -1,6 +1,6 @@
-import React, { useRef } from 'react';
-import { motion, useScroll } from 'framer-motion';
-import Lilcon from './Lilcon';
+import React, { useRef } from "react";
+import { motion, useScroll } from "framer-motion";
+import Lilcon from "./Lilcon";
 
 const Details = ({ position, company, time, address, work }) => {
   const ref = useRef(null);
@@ -13,7 +13,7 @@ const Details = ({ position, company, time, address, work }) => {
       <motion.div
         initial={{ y: 50 }}
         whileInView={{ y: 0 }}
-        transition={{ duration: 0.5, type: 'spring' }}
+        transition={{ duration: 0.5, type: "spring" }}
       >
         <h3 className="text-2xl font-bold capitalize sm:text-xl xs:text-lg">
           {position}&nbsp;
@@ -32,7 +32,7 @@ const Experience = () => {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ['start end', 'center start'],
+    offset: ["start end", "center start"],
   });
   return (
     <div className="my-64">
@@ -83,11 +83,18 @@ const Experience = () => {
             work="For the first time touching the world of coding, along with being an IT support. I became a Junior Web Developer by creating several product profile websites for companies"
           />
           <Details
-            position="Web Developer"
+            position="Junior Web Developer"
             company="PT. Eka Mandiri Asa Sejati"
             time="April 2022 - January 2023"
             address="Nifarro Park, ITS Tower, Jl. Raya Pasar Minggu No.18, RT.1/RW.1, Pejaten Timur, Ps. Minggu, Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta"
             work="Become a web developer for companies by creating several website profiles, creating CMS for products, etc"
+          />
+          <Details
+            position="Internship Design"
+            company="PT. Hamengku Karya"
+            time="August 2023 - September 2023"
+            address="Jl. Pasung Grigis No.3, Padangsambian Kaja, Kec. Denpasar Bar., Kota Denpasar, Bali"
+            work="Create UI designs for company Applications, Create print designs for promotions and others"
           />
         </ul>
       </div>
