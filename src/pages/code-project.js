@@ -169,7 +169,7 @@ const project = () => {
               <FeaturedProject
                 title="Website TikTok Clone App"
                 summary="The tiktok website app clone website with google auth and sanity.io database"
-                link="https://tiktak-weld.vercel.app/"
+                link="https://tiktakk.vercel.app/"
                 img={portoweb4}
                 type="Web App"
                 github="https://github.com/ezazee/-portfolio-tiktak.git"
