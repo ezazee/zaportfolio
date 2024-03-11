@@ -8,6 +8,8 @@ import Head from 'next/head';
 import { useRouter } from 'next/router';
 import Script from 'next/script';
 import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/next';
+
 
 const montserrat = Montserrat({
   subsets: ['latin'],
@@ -47,6 +49,7 @@ export default function App({ Component, pageProps }) {
         <AnimatePresence mode="wait">
           <Component key={router.asPath} {...pageProps} />
           <Analytics />
+          <SpeedInsights />
         </AnimatePresence>
         <Footer />
       </main>
