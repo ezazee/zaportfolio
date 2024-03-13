@@ -139,7 +139,7 @@ const project = () => {
               <FeaturedProject
                 title="Website Profile Product"
                 summary="Create a website profile for e-commerce products"
-                link="https://nikila.id/"
+                link="https://nikila.vercel.app/"
                 img={portoweb1}
                 type="Website Profile"
                 github="https://github.com/ezazee/nikilapol_laravel"
@@ -159,7 +159,7 @@ const project = () => {
               <Project
                 title="Website Profile Mechine Product"
                 summary="Create a website profile for Mechine E-Commerse products"
-                link="https://nuku-sistem.id/"
+                link="https://ezazee.github.io/404_html/"
                 img={portoweb3}
                 type="Website Profile"
                 github="https://github.com/ezazee/NuKu.git"
@@ -179,7 +179,7 @@ const project = () => {
               <Project
                 title="Website Profile Product"
                 summary="Create a website profile for e-commerce products"
-                link="https://nyakubitung.com/"
+                link="https://nyakubitung.vercel.app/"
                 img={portoweb5}
                 type="Website Profile"
                 github="https://github.com/ezazee/nyakubitung"
@@ -209,7 +209,7 @@ const project = () => {
               <Project
                 title="Website Profile IT Company"
                 summary="Website Profile for IT Company"
-                link="https://mkd.nikila.id/"
+                link="https://ezazee.github.io/404_html/"
                 img={portoweb8}
                 type="Website Profile"
                 github="https://github.com/ezazee/-portfolio_company1.git"
