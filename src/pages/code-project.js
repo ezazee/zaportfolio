@@ -17,6 +17,7 @@ import portoweb7 from '../../public/images/projects/web/porto7.png';
 import portoweb8 from '../../public/images/projects/web/porto8.png';
 import portoweb9 from '../../public/images/projects/web/porto9.png';
 import portoweb10 from '../../public/images/projects/web/porto10.jpg';
+import portoweb11 from '../../public/images/projects/web/porto11.png';
 
 // Import Image Flutter Native APP
 import flutter1 from '../../public/images/projects/flutter/flutter1.png';
@@ -233,6 +234,16 @@ const project = () => {
                 img={portoweb10}
                 type="Website Admin"
                 github="https://github.com/ezazee/next_dashboard"
+              />
+            </div>
+            <div className="col-span-12">
+              <FeaturedProject
+                title="Website Netflix Clone"
+                summary="Netflix clone website using React and Axios"
+                link="https://zaflixx.vercel.app/"
+                img={portoweb11}
+                type="Website Streaming"
+                github="https://github.com/ezazee/zaflixx"
               />
             </div>
           </div>
