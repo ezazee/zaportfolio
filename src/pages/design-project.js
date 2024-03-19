@@ -57,7 +57,7 @@ const DesignProject = () => {
         </div>
 
         {/* Gallery Design */}
-        <div className=" px-10 pt-10 container grid grid-cols-3 gap-2 mx-auto">
+        <div className="container grid grid-cols-3 gap-2 px-10 pt-10 mx-auto ">
           <div className="w-full rounded">
             <Image src={design3} alt="Design" />
           </div>
@@ -104,7 +104,7 @@ const DesignProject = () => {
         </div>
 
         {/* Gallery Design */}
-        <div className=" px-10 pt-10 container grid grid-cols-3 gap-2 mx-auto">
+        <div className="container grid grid-cols-3 gap-2 px-10 pt-10 mx-auto ">
           <div className="w-full rounded">
             <div className="w-full rounded">
               <Image src={ui1} alt="Design" />
