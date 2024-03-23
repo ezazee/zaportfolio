@@ -240,7 +240,7 @@ const project = () => {
               <FeaturedProject
                 title="Website Netflix Clone"
                 summary="Netflix clone website using React and Axios"
-                link="https://zaflixx.vercel.app/"
+                link="https://zaflix.vercel.app/"
                 img={portoweb11}
                 type="Website Streaming"
                 github="https://github.com/ezazee/zaflixx"

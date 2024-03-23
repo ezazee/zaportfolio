@@ -15,6 +15,7 @@ import design5 from '../../public/images/projects/design/5.png';
 import design6 from '../../public/images/projects/design/6.png';
 import design7 from '../../public/images/projects/design/7.png';
 import design8 from '../../public/images/projects/design/8.png';
+import design9 from '../../public/images/projects/design/9.png';
 
 // import UI Design
 import ui1 from '../../public/images/projects/design/ui1.png';
@@ -81,6 +82,9 @@ const DesignProject = () => {
           </div>
           <div className="w-full rounded">
             <Image src={design8} alt="Design" />
+          </div>
+          <div className="w-full rounded">
+            <Image src={design9} alt="Design" />
           </div>
         </div>
       </section>
