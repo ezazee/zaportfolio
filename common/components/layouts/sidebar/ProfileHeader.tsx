@@ -27,7 +27,7 @@ const ProfileHeader = ({ expandMenu, imageSize }: ProfileHeaderProps) => {
           style={{ width: expandMenu ? 80 : imageSize, height: expandMenu ? 80 : imageSize }}
         >
           <Image
-            src={"/images/reza.jpg"}
+            src={"/images/reza.JPG"}
             width={expandMenu ? 80 : imageSize}
             height={expandMenu ? 80 : imageSize}
             alt={METADATA.creator}
