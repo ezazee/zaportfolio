@@ -57,6 +57,9 @@ export const metadata: Metadata = {
     apple: "/images/favicon/apple-touch-icon.png",
   },
   manifest: "/images/favicon/site.webmanifest",
+  verification: {
+    google: "bL2H8AMdobZW-OHfBm4kzOov3UJLVngITxzqVZJwKyo",
+  },
 };
 
 interface RootLayoutProps {
