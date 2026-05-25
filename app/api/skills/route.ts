@@ -1,0 +1,25 @@
+import { type NextRequest, NextResponse } from "next/server";
+import { getServerSession } from "next-auth";
+import { supabase } from "@/common/utils/supabase";
+
+const isAuthor = async () => {
+  const session = await getServerSession();
+  return session?.user?.email === process.env.NEXT_PUBLIC_AUTHOR_EMAIL;
+};
+
+export const GET = async () => {
+  const { data, error } = await supabase
+    .from("skills")
+    .select("*")
+    .order("display_order", { ascending: true });
+  if (error) return NextResponse.json([], { status: 200 });
+  return NextResponse.json(data, { status: 200 });
+};
+
+export const POST = async (req: NextRequest) => {
+  if (!(await isAuthor())) return NextResponse.json({ message: "Unauthorized" }, { status: 401 });
+  const body = await req.json();
+  const { data, error } = await supabase.from("skills").insert(body).select().single();
+  if (error) return NextResponse.json({ message: error.message }, { status: 500 });
+  return NextResponse.json(data, { status: 201 });
+};
