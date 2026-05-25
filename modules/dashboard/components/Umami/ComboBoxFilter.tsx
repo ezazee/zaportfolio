@@ -86,7 +86,7 @@ const ComboBoxFilter = () => {
                 <div key={index} className="group flex items-center gap-1">
                   <button
                     className="flex flex-grow items-center gap-2 rounded-md p-2 text-left text-sm text-neutral-900 hover:bg-neutral-200 dark:text-neutral-50 dark:hover:bg-neutral-800"
-                    onClick={() => handleSelect(item.domain)}
+                    onClick={() => handleSelect(item.domain ?? "")}
                   >
                     <div className="w-4">
                       {selectValue === item.domain && <ActiveIcon size={16} />}

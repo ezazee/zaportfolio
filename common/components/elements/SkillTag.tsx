@@ -1,12 +1,12 @@
 "use client";
 
-import React from "react";
+import React, { ReactElement } from "react";
 import { useTheme } from "next-themes";
 import cn from "@/common/libs/clsxm";
 
 interface SkillTagProps {
   name: string;
-  icon: JSX.Element;
+  icon: ReactElement<{ size?: number }>;
   color?: string;
   background?: string; // hex color e.g. "#f97316"
 }

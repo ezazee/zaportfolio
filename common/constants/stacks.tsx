@@ -43,9 +43,11 @@ import {
 } from "react-icons/si";
 import { RiShieldKeyholeFill } from "react-icons/ri";
 
+import { ReactElement } from "react";
+
 export type SkillProps = {
   [key: string]: {
-    icon: JSX.Element;
+    icon: ReactElement<{ size?: number }>;
     background: string;
     color: string;
     isActive?: boolean;

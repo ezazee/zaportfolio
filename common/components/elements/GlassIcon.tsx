@@ -1,14 +1,12 @@
+import { ReactElement } from "react";
+
 export interface GlassIconProps {
   name: string;
-  icon: JSX.Element;
+  icon: ReactElement;
   background: string;
 }
 
-const GlassIcon: React.FC<GlassIconProps> = ({
-  name,
-  icon,
-  background,
-}: GlassIconProps) => {
+const GlassIcon = ({ name, icon, background }: GlassIconProps) => {
   return (
     <button
       type="button"

@@ -128,8 +128,8 @@ export const getAllWebsiteData = async (): Promise<UmamiResponse> => {
 
   const results = await Promise.all(
     websites.map(async (w) => {
-      const pv = await getPageViewsByDataRange(w.domain);
-      const st = await getWebsiteStats(w.domain);
+      const pv = await getPageViewsByDataRange(w.domain ?? "");
+      const st = await getWebsiteStats(w.domain ?? "");
       return {
         pageviews: pv.data.pageviews,
         sessions: pv.data.sessions,
