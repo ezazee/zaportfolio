@@ -89,7 +89,11 @@ const Profile = ({ data }: ProfileProps) => {
         <div className="flex gap-x-4">
           <div className="flex items-center">
             <Image
-              src={process.env.NEXT_PUBLIC_AVATAR_URL || "/images/avatar.jpg"}
+              src={
+                data?.discordId && data?.discordAvatar
+                  ? `https://cdn.discordapp.com/avatars/${data.discordId}/${data.discordAvatar}.png`
+                  : process.env.NEXT_PUBLIC_AVATAR_URL || "/images/reza.jpg"
+              }
               width={80}
               height={80}
               alt={data?.name || ""}

@@ -47,13 +47,15 @@ const Leaderboard = ({ data }: LeaderboardProps) => {
         {t("title_leaderboard")}
       </span>
       {datas.map((data, index) => {
-        const percent = (data?.english?.rank / data?.english?.count) * 100;
+        const rank = data?.english?.rank;
+        const count = data?.english?.count;
+        const percent = rank && count ? ((rank / count) * 100).toFixed(2) : undefined;
         return (
           <Item
             key={index}
             label={index == 0 ? "15" : "60"}
-            value={convertToOrdinal(data?.english?.rank) || "-"}
-            percent={percent.toFixed(2)}
+            value={rank ? convertToOrdinal(rank) : "-"}
+            percent={percent}
           />
         );
       })}

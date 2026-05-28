@@ -57,7 +57,7 @@ const OverviewItem = ({ data, type }: OverviewItemProps) => {
     setIsHover(item);
   };
 
-  if (data && typeof data === "object") {
+  if (data && typeof data === "object" && Object.keys(data).length > 0) {
     const datas = Object.keys(data).map((time) => {
       const items = data[time];
       const maxWpm = items.reduce((prev, current) =>
@@ -87,6 +87,14 @@ const OverviewItem = ({ data, type }: OverviewItemProps) => {
       </SpotlightCard>
     );
   }
+
+  return (
+    <SpotlightCard className="flex items-center justify-center p-4 h-28">
+      <span className="text-sm text-neutral-500 dark:text-neutral-600">
+        No {type} data yet
+      </span>
+    </SpotlightCard>
+  );
 };
 
 export default OverviewItem;

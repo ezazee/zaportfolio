@@ -61,4 +61,6 @@ export type MonkeytypeData = {
   details: detailsProfile;
   allTimeLbs: AllTimeLbs;
   uid: string;
+  discordId?: string;
+  discordAvatar?: string;
 };
