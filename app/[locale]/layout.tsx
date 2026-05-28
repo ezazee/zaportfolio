@@ -82,7 +82,7 @@ const RootLayout = async ({
   const messages = await getMessages();
   const session = await getServerSession();
 
-  const domain = process.env.DOMAIN || "https://zaportfolio.vercel.app";
+  const domain = process.env.DOMAIN || "https://zaportfolio.my.id";
   const avatarUrl = process.env.NEXT_PUBLIC_AVATAR_URL || `${domain}/images/avatar.jpg`;
   const githubUrl = `https://github.com/${process.env.NEXT_PUBLIC_GITHUB_USERNAME || ""}`;
   const linkedinUrl = process.env.NEXT_PUBLIC_SOCIAL_LINKEDIN || "";

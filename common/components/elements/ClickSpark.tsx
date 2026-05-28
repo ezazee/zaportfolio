@@ -1,4 +1,4 @@
-import { useRef, useEffect, useCallback } from "react";
+import { useRef, useEffect, useCallback, ReactNode, FC, MouseEvent } from "react";
 
 interface ClickSparkProps {
   sparkColor?: string;
@@ -8,7 +8,7 @@ interface ClickSparkProps {
   duration?: number;
   easing?: "linear" | "ease-in" | "ease-out" | "ease-in-out";
   extraScale?: number;
-  children?: React.ReactNode;
+  children?: ReactNode;
 }
 
 interface Spark {
@@ -18,7 +18,7 @@ interface Spark {
   startTime: number;
 }
 
-const ClickSpark: React.FC<ClickSparkProps> = ({
+const ClickSpark: FC<ClickSparkProps> = ({
   sparkColor = "#fff",
   sparkSize = 10,
   sparkRadius = 15,
@@ -140,7 +140,7 @@ const ClickSpark: React.FC<ClickSparkProps> = ({
     extraScale,
   ]);
 
-  const handleClick = (e: React.MouseEvent<HTMLDivElement>): void => {
+  const handleClick = (e: MouseEvent<HTMLDivElement>): void => {
     const canvas = canvasRef.current;
     if (!canvas) return;
     const rect = canvas.getBoundingClientRect();

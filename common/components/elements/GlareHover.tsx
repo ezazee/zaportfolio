@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useRef, ReactNode } from "react";
 
 interface GlareHoverProps {
   width?: string;
@@ -6,7 +6,7 @@ interface GlareHoverProps {
   background?: string;
   borderRadius?: string;
   borderColor?: string;
-  children?: React.ReactNode;
+  children?: ReactNode;
   glareColor?: string;
   glareOpacity?: number;
   glareAngle?: number;

@@ -1,6 +1,6 @@
 import { MetadataRoute } from "next";
 
-const DOMAIN = process.env.DOMAIN || "https://zaportfolio.vercel.app";
+const DOMAIN = process.env.DOMAIN || "https://zaportfolio.my.id";
 const LOCALES = ["id", "en"];
 
 const PAGES = [

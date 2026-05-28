@@ -25,7 +25,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 const LinksPage = async ({ params }: Props) => {
   const { locale } = await params;
-  const domain = process.env.DOMAIN || "https://zaportfolio.vercel.app";
+  const domain = process.env.DOMAIN || "https://zaportfolio.my.id";
   return <Links domain={domain} locale={locale} />;
 };
 

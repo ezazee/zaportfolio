@@ -1,7 +1,7 @@
 import { MetadataRoute } from "next";
 
 export default function robots(): MetadataRoute.Robots {
-  const domain = process.env.DOMAIN || "https://zaportfolio.vercel.app";
+  const domain = process.env.DOMAIN || "https://zaportfolio.my.id";
   return {
     rules: [
       {

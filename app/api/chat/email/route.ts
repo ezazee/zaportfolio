@@ -42,10 +42,10 @@ export const POST = async (request: Request) => {
               "${message}"
             </div>
             <p style="font-size: 14px; color: #64748b; margin-top: 24px;">Klik tombol di bawah ini untuk melihat percakapan lengkap.</p>
-            <a href="https://zaportfolio.vercel.app/chat" style="${buttonStyle}">Buka Chat Room</a>
+            <a href="https://zaportfolio.my.id/id/chat" style="${buttonStyle}">Buka Chat Room</a>
           </div>
           <div style="${footerStyle}">
-            Sent by Mohamad Reza Reziyanto Portfolio System • zaportfolio.vercel.app • Indonesia
+            Sent by Mohamad Reza Reziyanto Portfolio System • zaportfolio.my.id • Indonesia
           </div>
         </div>
       `;
@@ -77,7 +77,7 @@ export const POST = async (request: Request) => {
               "${message}"
             </div>
             
-            <a href="https://zaportfolio.vercel.app/chat" style="${buttonStyle}">Balas Sekarang</a>
+            <a href="https://zaportfolio.my.id/id/chat" style="${buttonStyle}">Balas Sekarang</a>
           </div>
           <div style="${footerStyle}">
             Automated Notification System • Portfolio App

@@ -101,7 +101,7 @@ const Links = ({ domain, locale }: LinksProps) => {
       {/* Profile */}
       <div className="flex flex-col items-center gap-3 text-center">
         <Image
-          src={process.env.NEXT_PUBLIC_AVATAR_URL || "/images/reza.JPG"}
+          src={process.env.NEXT_PUBLIC_AVATAR_URL || "/images/reza.jpg"}
           width={80}
           height={80}
           alt="Mohamad Reza"
