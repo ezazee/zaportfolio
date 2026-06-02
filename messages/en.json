@@ -20,7 +20,7 @@
   },
   "AboutPage": {
     "title": "About",
-    "description": "A brief introduction to who I am.",
+    "description": "Jakarta-based Freelance Web Developer specializing in React.js, Next.js & Tailwind CSS. Building fast, responsive, and modern web solutions for businesses across Indonesia.",
     "resume": {
       "paragraph_1": "I'm Mohamad Reza Reziyanto, a Jakarta-based Web Developer dedicated to building impactful digital solutions. I specialize in developing web platforms using a modern tech stack, including React, Next.js, and Tailwind CSS, focusing on creating seamless user experiences.",
       "paragraph_2": "My journey in the digital world began in 2020, rooted in a background of cinematography and creative design. This unique blend of visual storytelling and technical expertise allows me to approach web development with both a creative eye and a results-driven mindset.",
@@ -80,6 +80,7 @@
     "umami": {
       "title": "Umami",
       "sub_title": "Monitor real-time traffic and interactions from my portfolio site.",
+      "traffic_trends": "Traffic Trends",
       "overview": {
         "page_views": "Page Views",
         "visitors": "Visitors",
@@ -96,12 +97,16 @@
       "filter_placeholder": "Filter domain..."
     },
     "github": {
-      "title": "GitHub Contributions",
-      "sub_title": "My GitHub activity over the past year.",
-      "title_total_contribution": "Total",
-      "title_total_this_week_contribution": "This week",
-      "title_best_contribution": "Best",
-      "title_average_contribution": "Average",
+      "title": "GitHub Activity",
+      "sub_title": "Open source contributions, repositories, and coding activity over the past year.",
+      "title_followers": "Followers",
+      "title_following": "Following",
+      "title_repositories": "Repositories",
+      "title_total_contribution": "Contributions",
+      "title_total_this_week_contribution": "This Week",
+      "title_best_contribution": "Best Day",
+      "title_average_contribution": "Daily Average",
+      "title_pinned_repos": "Pinned Repositories",
       "title_less_contribution": "Less",
       "title_more_contribution": "More",
       "unit": "day"

@@ -28,6 +28,7 @@ const Layouts = ({ children }: LayoutsProps) => {
       delay: 0,
       once: true,
       offset: 20,
+      disable: window.innerWidth < 768,
     });
   }, []);
 

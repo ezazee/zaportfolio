@@ -5,6 +5,7 @@ import Container from "@/common/components/elements/Container";
 import PageHeading from "@/common/components/elements/PageHeading";
 import Projects from "@/modules/projects";
 import { METADATA } from "@/common/constants/metadata";
+import { getBreadcrumbJsonLd } from "@/common/utils/breadcrumb";
 
 interface ProjectsPageProps {
   params: Promise<{ locale: string }>;
@@ -16,11 +17,22 @@ export async function generateMetadata({
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "ProjectsPage" });
 
-  const domain = process.env.DOMAIN || "";
+  const domain = process.env.DOMAIN || "https://zaportfolio.my.id";
+  const title = `${t("title")} ${METADATA.exTitle}`;
+  const description = t("description");
   return {
-    title: `${t("title")} ${METADATA.exTitle}`,
-    description: t("description"),
-    keywords: "portofolio web developer indonesia, project website freelancer, jasa pembuatan web, contoh project react next.js",
+    title,
+    description,
+    keywords: "portofolio web developer indonesia, contoh project website profesional, hasil kerja freelancer web developer, project react next.js indonesia, website buatan freelancer jakarta, referensi jasa pembuatan website",
+    openGraph: {
+      title,
+      description,
+      url: `${domain}/${locale}/projects`,
+      siteName: "Zaportfolio",
+      images: [METADATA.profile],
+      type: "website",
+    },
+    twitter: { card: "summary_large_image", title, description, images: [METADATA.profile] },
     alternates: {
       canonical: `${domain}/${locale}/projects`,
       languages: {
@@ -35,12 +47,16 @@ export async function generateMetadata({
 const ProjectsPage = async ({ params }: ProjectsPageProps) => {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "ProjectsPage" });
+  const breadcrumb = getBreadcrumbJsonLd(locale, { name: t("title"), path: "/projects" });
 
   return (
-    <Container data-aos="fade-up">
-      <PageHeading title={t("title")} description={t("description")} />
-      <Projects />
-    </Container>
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
+      <Container data-aos="fade-up">
+        <PageHeading title={t("title")} description={t("description")} />
+        <Projects />
+      </Container>
+    </>
   );
 };
 

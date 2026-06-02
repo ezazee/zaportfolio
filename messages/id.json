@@ -20,7 +20,7 @@
   },
   "AboutPage": {
     "title": "Tentang",
-    "description": "Pengenalan singkat mengenai siapa saya.",
+    "description": "Freelance Web Developer berbasis Jakarta, spesialis React.js, Next.js & Tailwind CSS. Membangun solusi web modern, cepat, dan responsif untuk bisnis di seluruh Indonesia.",
     "resume": {
       "paragraph_1": "Saya Mohamad Reza Reziyanto, seorang Web Developer yang berbasis di Jakarta, berdedikasi untuk membangun solusi digital yang berdampak. Saya spesialis dalam pengembangan platform web menggunakan tech stack modern, termasuk React, Next.js, dan Tailwind CSS, dengan fokus pada penciptaan pengalaman pengguna yang mulus.",
       "paragraph_2": "Perjalanan saya di dunia digital dimulai pada tahun 2020, berakar dari latar belakang sinematografi dan desain kreatif. Perpaduan unik antara penceritaan visual dan keahlian teknis ini memungkinkan saya untuk mendekati pengembangan web dengan mata yang kreatif dan pola pikir yang berorientasi pada hasil.",
@@ -80,6 +80,7 @@
     "umami": {
       "title": "Umami",
       "sub_title": "Pantau trafik dan interaksi real-time dari situs portofolio saya.",
+      "traffic_trends": "Tren Trafik",
       "overview": {
         "page_views": "Dilihat",
         "visitors": "Pengunjung",
@@ -96,12 +97,16 @@
       "filter_placeholder": "Filter domain..."
     },
     "github": {
-      "title": "Kontribusi GitHub",
-      "sub_title": "Aktivitas GitHub saya selama setahun terakhir.",
-      "title_total_contribution": "Total",
-      "title_total_this_week_contribution": "Minggu ini",
-      "title_best_contribution": "Terbaik",
-      "title_average_contribution": "Rata-rata",
+      "title": "Aktivitas GitHub",
+      "sub_title": "Kontribusi open source, repositori, dan aktivitas coding selama setahun terakhir.",
+      "title_followers": "Pengikut",
+      "title_following": "Mengikuti",
+      "title_repositories": "Repositori",
+      "title_total_contribution": "Kontribusi",
+      "title_total_this_week_contribution": "Minggu Ini",
+      "title_best_contribution": "Hari Terbaik",
+      "title_average_contribution": "Rata-rata Harian",
+      "title_pinned_repos": "Repositori Disematkan",
       "title_less_contribution": "Sedikit",
       "title_more_contribution": "Banyak",
       "unit": "hari"

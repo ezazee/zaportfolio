@@ -15,10 +15,13 @@ export async function generateMetadata({
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "HomePage" });
 
-  const domain = process.env.DOMAIN || "";
+  const domain = process.env.DOMAIN || "https://zaportfolio.my.id";
+  const description = locale === "id"
+    ? "Freelance Web Developer Indonesia spesialis React.js, Next.js & Tailwind CSS. Jasa pembuatan website profesional, cepat, dan SEO-friendly untuk bisnis Anda."
+    : "Freelance Web Developer Indonesia specializing in React.js, Next.js & Tailwind CSS. Professional website development — fast, modern, and SEO-friendly.";
   return {
     title: `${METADATA.creator} ${METADATA.exTitle}`,
-    description: t("resume.paragraph_1"),
+    description,
     keywords: METADATA.keyword,
     alternates: {
       canonical: `${domain}/${locale}`,
@@ -30,11 +33,17 @@ export async function generateMetadata({
     },
     openGraph: {
       title: `${METADATA.creator} ${METADATA.exTitle}`,
-      description: t("resume.paragraph_1"),
+      description,
       url: `${domain}/${locale}`,
       siteName: METADATA.openGraph.siteName,
       locale: locale === "id" ? "id_ID" : "en_US",
       type: "website",
+      images: [METADATA.profile],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${METADATA.creator} ${METADATA.exTitle}`,
+      description,
       images: [METADATA.profile],
     },
   };

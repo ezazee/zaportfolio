@@ -6,6 +6,24 @@ const GITHUB_USER_ENDPOINT = "https://api.github.com/graphql";
 
 const GITHUB_USER_QUERY = `query($username: String!) {
   user(login: $username) {
+    followers { totalCount }
+    following { totalCount }
+    repositories(ownerAffiliations: OWNER, privacy: PUBLIC) { totalCount }
+    pinnedItems(first: 6, types: REPOSITORY) {
+      nodes {
+        ... on Repository {
+          name
+          description
+          url
+          stargazerCount
+          forkCount
+          primaryLanguage {
+            name
+            color
+          }
+        }
+      }
+    }
     contributionsCollection {
       contributionCalendar {
         colors
@@ -50,9 +68,9 @@ const fetchGithubData = async (username: string, token: string) => {
 
 const getCachedGithubData = unstable_cache(
   async (username: string, token: string) => fetchGithubData(username, token),
-  ["github-stats-cache-key"],
+  ["github-stats-cache-key-v4"],
   {
-    revalidate: 3600,
+    revalidate: 300,
     tags: ["github-stats-tag"],
   },
 );

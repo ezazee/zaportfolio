@@ -8,10 +8,22 @@ type Props = { params: Promise<{ locale: string }> };
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "LinksPage" });
-  const domain = process.env.DOMAIN || "";
+  const domain = process.env.DOMAIN || "https://zaportfolio.my.id";
+  const title = `${t("title")} ${METADATA.exTitle}`;
+  const description = t("description");
   return {
-    title: `${t("title")} ${METADATA.exTitle}`,
-    description: t("description"),
+    title,
+    description,
+    keywords: "social media mohamad reza reziyanto, links web developer indonesia, kontak developer jakarta, github linkedin instagram reza",
+    openGraph: {
+      title,
+      description,
+      url: `${domain}/${locale}/links`,
+      siteName: "Zaportfolio",
+      images: [METADATA.profile],
+      type: "website",
+    },
+    twitter: { card: "summary_large_image", title, description, images: [METADATA.profile] },
     alternates: {
       canonical: `${domain}/${locale}/links`,
       languages: {

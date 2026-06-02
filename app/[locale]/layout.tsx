@@ -1,7 +1,8 @@
 import NextTopLoader from "nextjs-toploader";
 import Script from "next/script";
 import { getServerSession } from "next-auth";
-import { Analytics } from "@vercel/analytics/react";
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { getMessages, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
@@ -25,7 +26,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(
     process.env.NODE_ENV === "development"
       ? "http://localhost:3000"
-      : process.env.DOMAIN || "",
+      : process.env.DOMAIN || "https://zaportfolio.my.id",
   ),
   description: METADATA.description,
   keywords: METADATA.keyword,
@@ -35,7 +36,7 @@ export const metadata: Metadata = {
     url: METADATA.openGraph.url,
   },
   openGraph: {
-    images: METADATA.profile,
+    images: [METADATA.profile],
     url: METADATA.openGraph.url,
     siteName: METADATA.openGraph.siteName,
     locale: METADATA.openGraph.locale,
@@ -98,15 +99,16 @@ const RootLayout = async ({
         url: domain,
         image: avatarUrl,
         jobTitle: "Freelance Web Developer",
-        description:
-          "Freelance Web Developer Indonesia spesialis React.js, Next.js, dan Tailwind CSS. Berbasis di Jakarta, Indonesia.",
-        knowsAbout: ["React.js", "Next.js", "TypeScript", "TailwindCSS", "Node.js", "Laravel", "PHP", "Web Development"],
+        description: "Freelance Web Developer Indonesia spesialis React.js, Next.js, dan Tailwind CSS. Berbasis di Jakarta, Indonesia.",
+        knowsAbout: ["React.js", "Next.js", "TypeScript", "TailwindCSS", "Node.js", "Laravel", "PHP", "PostgreSQL", "Web Development", "UI/UX"],
         address: {
           "@type": "PostalAddress",
           addressLocality: "Jakarta",
+          addressRegion: "DKI Jakarta",
           addressCountry: "ID",
         },
         sameAs: [githubUrl, linkedinUrl, instagramUrl].filter(Boolean),
+        worksFor: { "@id": `${domain}/#service` },
       },
       {
         "@type": "WebSite",
@@ -116,6 +118,35 @@ const RootLayout = async ({
         description: "Portfolio website Mohamad Reza Reziyanto — Freelance Web Developer Indonesia",
         publisher: { "@id": `${domain}/#person` },
         inLanguage: ["id", "en"],
+        potentialAction: {
+          "@type": "SearchAction",
+          target: `${domain}/en/projects?q={search_term_string}`,
+          "query-input": "required name=search_term_string",
+        },
+      },
+      {
+        "@type": "ProfessionalService",
+        "@id": `${domain}/#service`,
+        name: "Jasa Web Development — Mohamad Reza Reziyanto",
+        url: domain,
+        image: avatarUrl,
+        description: "Jasa pembuatan website profesional menggunakan React.js, Next.js, dan Tailwind CSS. Melayani pembuatan website company profile, landing page, toko online, dan aplikasi web untuk bisnis di seluruh Indonesia.",
+        provider: { "@id": `${domain}/#person` },
+        areaServed: {
+          "@type": "Country",
+          name: "Indonesia",
+        },
+        serviceType: ["Pembuatan Website", "Web Development", "Frontend Development", "Fullstack Development"],
+        hasOfferCatalog: {
+          "@type": "OfferCatalog",
+          name: "Layanan Web Development",
+          itemListElement: [
+            { "@type": "Offer", itemOffered: { "@type": "Service", name: "Website Company Profile" } },
+            { "@type": "Offer", itemOffered: { "@type": "Service", name: "Landing Page" } },
+            { "@type": "Offer", itemOffered: { "@type": "Service", name: "Web Application" } },
+            { "@type": "Offer", itemOffered: { "@type": "Service", name: "E-Commerce Website" } },
+          ],
+        },
       },
     ],
   };
@@ -123,15 +154,35 @@ const RootLayout = async ({
   return (
     <html lang={locale} suppressHydrationWarning={true}>
       <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link rel="preconnect" href="https://www.googletagmanager.com" />
+        <link rel="preconnect" href="https://cloud.umami.is" />
+        <link rel="preconnect" href="https://cdn.discordapp.com" />
+        <link rel="dns-prefetch" href="https://api.github.com" />
+        <link rel="dns-prefetch" href="https://api.monkeytype.com" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
         <Script
-          defer
           src="https://cloud.umami.is/script.js"
           data-website-id="2caecb33-2ab9-4aad-a30c-feaa0c1e0136"
+          strategy="afterInteractive"
         />
+        <Script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-SXJP42TN9C"
+          strategy="afterInteractive"
+        />
+        <Script id="gtag-init" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-SXJP42TN9C');
+          `}
+        </Script>
       </head>
       <body className={inter.className}>
         <NextTopLoader
@@ -156,6 +207,7 @@ const RootLayout = async ({
           </NextAuthProvider>
         </NextIntlClientProvider>
         <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );

@@ -7,6 +7,7 @@ import { useTranslations } from "next-intl";
 
 import Overview from "./Overview";
 import Calendar from "./Calendar";
+import PinnedRepos from "./PinnedRepos";
 
 import SectionHeading from "@/common/components/elements/SectionHeading";
 import SectionSubHeading from "@/common/components/elements/SectionSubHeading";
@@ -49,9 +50,10 @@ const Contributions = ({ endpoint }: ContributionsProps) => {
       ) : isLoading ? (
         <ContributionsSkeleton />
       ) : (
-        <div className="space-y-3">
-          <Overview data={contributionCalendar} />
+        <div className="space-y-4">
+          <Overview data={contributionCalendar} profile={data} />
           <Calendar data={contributionCalendar} />
+          <PinnedRepos repos={data?.pinnedItems?.nodes ?? []} />
         </div>
       )}
     </section>
