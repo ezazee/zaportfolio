@@ -14,5 +14,6 @@ export const METADATA = {
     locale: "id-ID",
   },
   exTitle: "| Zaportfolio",
-  profile: process.env.NEXT_PUBLIC_AVATAR_URL || "/images/avatar.jpg",
+  profile: process.env.NEXT_PUBLIC_AVATAR_URL ||
+    `${process.env.DOMAIN || "https://zaportfolio.my.id"}/images/reza.jpg`,
 };

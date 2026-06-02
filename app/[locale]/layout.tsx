@@ -36,7 +36,14 @@ export const metadata: Metadata = {
     url: METADATA.openGraph.url,
   },
   openGraph: {
-    images: [METADATA.profile],
+    images: [
+      {
+        url: METADATA.profile,
+        width: 1200,
+        height: 630,
+        alt: "Mohamad Reza Reziyanto — Freelance Web Developer Indonesia",
+      },
+    ],
     url: METADATA.openGraph.url,
     siteName: METADATA.openGraph.siteName,
     locale: METADATA.openGraph.locale,
@@ -84,7 +91,7 @@ const RootLayout = async ({
   const session = await getServerSession();
 
   const domain = process.env.DOMAIN || "https://zaportfolio.my.id";
-  const avatarUrl = process.env.NEXT_PUBLIC_AVATAR_URL || `${domain}/images/avatar.jpg`;
+  const avatarUrl = process.env.NEXT_PUBLIC_AVATAR_URL || `${domain}/images/reza.jpg`;
   const githubUrl = `https://github.com/${process.env.NEXT_PUBLIC_GITHUB_USERNAME || ""}`;
   const linkedinUrl = process.env.NEXT_PUBLIC_SOCIAL_LINKEDIN || "";
   const instagramUrl = process.env.NEXT_PUBLIC_SOCIAL_INSTAGRAM || "";
@@ -131,6 +138,14 @@ const RootLayout = async ({
         url: domain,
         image: avatarUrl,
         description: "Jasa pembuatan website profesional menggunakan React.js, Next.js, dan Tailwind CSS. Melayani pembuatan website company profile, landing page, toko online, dan aplikasi web untuk bisnis di seluruh Indonesia.",
+        telephone: process.env.NEXT_PUBLIC_AUTHOR_PHONE || "",
+        priceRange: "Rp 500.000 - Rp 15.000.000",
+        address: {
+          "@type": "PostalAddress",
+          addressLocality: "Jakarta",
+          addressRegion: "DKI Jakarta",
+          addressCountry: "ID",
+        },
         provider: { "@id": `${domain}/#person` },
         areaServed: {
           "@type": "Country",
