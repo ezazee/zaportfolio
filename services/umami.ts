@@ -109,8 +109,8 @@ const mergeData = (allResults: UmamiResponse[]): UmamiResponse => {
       });
     };
 
-    mergeChart(combined.pageviews, result.pageviews);
-    mergeChart(combined.sessions, result.sessions);
+    mergeChart(combined.pageviews, result.pageviews ?? []);
+    mergeChart(combined.sessions, result.sessions ?? []);
   });
 
   combined.pageviews.sort(
@@ -123,6 +123,14 @@ const mergeData = (allResults: UmamiResponse[]): UmamiResponse => {
   return combined;
 };
 
+const emptyStats = (): UmamiResponse["websiteStats"] => ({
+  pageviews: { value: 0 },
+  visitors: { value: 0 },
+  visits: { value: 0 },
+  countries: { value: 0 },
+  events: { value: 0 },
+});
+
 export const getAllWebsiteData = async (): Promise<UmamiResponse> => {
   const { websites } = UMAMI_ACCOUNT;
 
@@ -131,9 +139,9 @@ export const getAllWebsiteData = async (): Promise<UmamiResponse> => {
       const pv = await getPageViewsByDataRange(w.domain ?? "");
       const st = await getWebsiteStats(w.domain ?? "");
       return {
-        pageviews: pv.data.pageviews,
-        sessions: pv.data.sessions,
-        websiteStats: st.data,
+        pageviews: pv.data?.pageviews ?? [],
+        sessions: pv.data?.sessions ?? [],
+        websiteStats: st.data?.pageviews ? st.data : emptyStats(),
       };
     }),
   );
